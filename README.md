@@ -68,6 +68,37 @@ CIRCUIT DIAGRAM
 
 **PROGRAM** 
  
+```
+int led=4;
+int sensorpot;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  sensorpot=analogRead(A0);
+  Serial.print("data=");
+  Serial.println(sensorpot);
+  delay(500);
+  if(sensorpot>500)
+  {
+    digitalWrite(led, HIGH);
+      delay(100);
+    digitalWrite(led, LOW);
+      delay(100);
+  }
+  else
+  {
+    digitalWrite(led, LOW);
+    delay(100);
+  }
+}
+```
+SERIAL MONITOR
+![Exp 2 Serial monitor Intro to Robotics](https://github.com/Jespiahshihana/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/144718286/5cf417e6-7b6d-47b5-ba91-5cd859f7b68e)
 
 
 
@@ -82,7 +113,10 @@ CIRCUIT DIAGRAM
 **
 
 
-[My image](username.github.com/repository/img/image.jpg)
+[My image]![Exp 2(a) Intro to Robotics](https://github.com/Jespiahshihana/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/144718286/f7395eb0-4d8d-4715-b7d6-7b3f8dacecdc)
+![Exp 2(b) Intro to Robotics](https://github.com/Jespiahshihana/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/144718286/95e9cef1-4d58-44a7-b0af-c7440e75b54c)
+
+
 
 
 
